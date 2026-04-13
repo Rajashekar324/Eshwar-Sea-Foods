@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Eshwar Sea Foods offers fresh seafood supply in Hyderabad, Telangana. Order premium prawns, fish, lobster, crab and more from www.eshwarseafoods.in."/>
+<link rel="canonical" href="https://www.eshwarseafoods.in/"/>
+<meta property="og:title" content="Eshwar Sea Foods | www.eshwarseafoods.in"/>
+<meta property="og:description" content="Trusted seafood supplier in Hyderabad. Fresh prawns, fish, lobster, crab and bulk orders available. Call now for best prices."/>
+<meta property="og:url" content="https://www.eshwarseafoods.in/"/>
+<meta property="og:type" content="website"/>
+<title>Eshwar Sea Foods | www.eshwarseafoods.in</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy: #040d1a;
+  --navy2: #071628;
+  --navy3: #0a2040;
+  --aqua: #00c6d4;
+  --aqua2: #00e5d4;
+  --gold: #c8a96e;
+  --gold2: #e8c98a;
+  --white: #f5f9ff;
+  --muted: #8daabb;
+  --card-bg: rgba(7,22,40,0.85);
+  --border: rgba(0,198,212,0.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--navy2)}
+::-webkit-scrollbar-thumb{background:var(--aqua);border-radius:3px}
+
+/* ── NAVBAR ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5vw;height:70px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(4,13,26,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo .fish-icon{width:36px;height:36px;fill:var(--aqua)}
+.nav-logo span{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;letter-spacing:1px;color:var(--white)}
+.nav-logo span em{color:var(--aqua);font-style:normal}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.5px;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--aqua)}
+.nav-cta{background:linear-gradient(135deg,var(--aqua),var(--aqua2));color:var(--navy);font-weight:600;font-size:.82rem;padding:9px 22px;border-radius:30px;text-decoration:none;letter-spacing:.5px;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,198,212,0.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:.3s}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(4,13,26,0.98);backdrop-filter:blur(14px);padding:1.5rem 5vw 2rem;flex-direction:column;gap:1rem;border-bottom:1px solid var(--border);z-index:99}
+.mobile-menu a{color:var(--muted);text-decoration:none;font-size:1rem;padding:.5rem 0;border-bottom:1px solid var(--border);transition:color .3s}
+.mobile-menu a:hover{color:var(--aqua)}
+
+/* ── HERO ── */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:
+  linear-gradient(180deg, rgba(4,13,26,0.55) 0%, rgba(4,13,26,0.3) 40%, rgba(4,13,26,0.75) 100%),
+  url('https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=1800&auto=format&fit=crop&q=80') center/cover no-repeat;
+  animation:heroZoom 16s ease-in-out infinite alternate}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+.hero-ocean{position:absolute;bottom:0;left:0;right:0;height:180px;overflow:hidden;pointer-events:none}
+.hero-ocean svg{position:absolute;bottom:0;left:-10%;width:120%;animation:waveMove 8s linear infinite}
+.hero-ocean svg:nth-child(2){animation:waveMove 12s linear infinite reverse;opacity:.5}
+@keyframes waveMove{0%{transform:translateX(0)}100%{transform:translateX(5%)}}
+.hero-content{position:relative;z-index:2;max-width:800px;padding:0 20px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,198,212,0.12);border:1px solid rgba(0,198,212,0.3);border-radius:30px;padding:6px 18px;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--aqua);margin-bottom:1.5rem;animation:fadeUp .8s ease forwards}
+.hero-badge svg{width:14px;height:14px;fill:var(--aqua)}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:700;line-height:1;margin-bottom:1rem;animation:fadeUp .9s ease .1s both}
+.hero-title .accent{color:var(--aqua);display:block}
+.hero-title .foods{color:var(--gold);display:block}
+.hero-tagline{font-size:clamp(.95rem,2vw,1.15rem);color:rgba(245,249,255,0.75);max-width:520px;margin:0 auto 2.5rem;line-height:1.7;font-weight:300;animation:fadeUp .9s ease .2s both}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .9s ease .3s both}
+.btn-primary{background:linear-gradient(135deg,var(--aqua),var(--aqua2));color:var(--navy);font-weight:600;font-size:.9rem;padding:14px 34px;border-radius:50px;text-decoration:none;letter-spacing:.5px;transition:transform .25s,box-shadow .25s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,198,212,0.45)}
+.btn-outline{background:transparent;color:var(--white);font-weight:500;font-size:.9rem;padding:13px 32px;border-radius:50px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.35);letter-spacing:.5px;transition:all .25s;display:inline-flex;align-items:center;gap:8px}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--aqua);color:var(--aqua)}
+.hero-scroll{position:absolute;bottom:200px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:.72rem;letter-spacing:2px;text-transform:uppercase;animation:fadeIn 1s ease 1s both}
+.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,transparent,var(--aqua));animation:scrollPulse 1.8s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ── SECTION BASE ── */
+section{padding:100px 5vw}
+.section-label{display:inline-flex;align-items:center;gap:8px;color:var(--aqua);font-size:.75rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;margin-bottom:1rem}
+.section-label::before{content:'';display:block;width:30px;height:1.5px;background:var(--aqua)}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:700;line-height:1.1;margin-bottom:1rem}
+.section-title .gold{color:var(--gold)}
+.section-desc{color:var(--muted);font-size:1rem;line-height:1.8;max-width:580px;font-weight:300}
+.divider{width:60px;height:2px;background:linear-gradient(90deg,var(--aqua),transparent);margin:1.5rem 0}
+
+/* ── ABOUT ── */
+#about{background:var(--navy2);position:relative;overflow:hidden}
+#about::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,198,212,0.06) 0%,transparent 70%);pointer-events:none}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.about-image-wrap{position:relative}
+.about-img{width:100%;height:520px;object-fit:cover;border-radius:16px;display:block}
+.about-img-placeholder{width:100%;height:520px;border-radius:16px;background:linear-gradient(135deg,var(--navy3) 0%,#0d2d50 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.about-img-placeholder img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+.about-badge-float{position:absolute;bottom:30px;left:-30px;background:var(--gold);color:var(--navy);padding:16px 22px;border-radius:14px;font-weight:700}
+.about-badge-float .num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;line-height:1;display:block}
+.about-badge-float .lbl{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem}
+.stat-card{background:rgba(0,198,212,0.06);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem}
+.stat-card .snum{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--aqua);line-height:1}
+.stat-card .slbl{font-size:.8rem;color:var(--muted);margin-top:4px}
+
+/* ── PRODUCTS ── */
+#products{background:var(--navy);position:relative}
+#products::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300c6d4' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none;z-index:0}
+.products-header{text-align:center;max-width:600px;margin:0 auto 4rem;position:relative;z-index:1}
+.products-header .section-label{justify-content:center}
+.products-header .section-label::before{display:none}
+.products-header .divider{margin:1.5rem auto}
+.cat-tabs{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;position:relative;z-index:1}
+.cat-tab{background:rgba(0,198,212,0.06);border:1px solid var(--border);color:var(--muted);font-size:.82rem;font-weight:500;padding:9px 24px;border-radius:30px;cursor:pointer;transition:all .25s;letter-spacing:.5px}
+.cat-tab.active,.cat-tab:hover{background:var(--aqua);color:var(--navy);border-color:var(--aqua);font-weight:600}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;position:relative;z-index:1}
+.prod-card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s;backdrop-filter:blur(8px)}
+.prod-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,0.5),0 0 0 1px var(--aqua);border-color:var(--aqua)}
+.prod-card[data-cat]{display:none}
+.prod-card[data-cat].visible{display:block}
+.prod-img{width:100%;height:180px;object-fit:cover;display:block}
+.prod-img-placeholder{width:100%;height:180px;overflow:hidden;position:relative}
+.prod-img-placeholder img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.prod-card:hover .prod-img-placeholder img{transform:scale(1.08)}
+.prod-tag{position:absolute;top:10px;right:10px;background:var(--gold);color:var(--navy);font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase}
+.prod-body{padding:1.2rem 1.4rem}
+.prod-cat-label{font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--aqua);font-weight:600;margin-bottom:.4rem}
+.prod-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+.prod-note{font-size:.8rem;color:var(--muted);line-height:1.5}
+.grade-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.3);color:var(--gold2);font-size:.7rem;padding:4px 12px;border-radius:20px;margin-top:.75rem;font-weight:500;letter-spacing:.5px}
+
+/* ── WHY CHOOSE ── */
+#why{background:var(--navy2);position:relative;overflow:hidden}
+#why::before{content:'';position:absolute;bottom:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,198,212,0.05) 0%,transparent 70%);pointer-events:none}
+.why-inner{max-width:1200px;margin:0 auto}
+.why-header{text-align:center;margin-bottom:4rem}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.why-card{background:rgba(4,13,26,0.6);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all .3s;position:relative;overflow:hidden}
+.why-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,198,212,0.05),transparent);opacity:0;transition:opacity .3s}
+.why-card:hover{border-color:var(--aqua);transform:translateY(-4px)}
+.why-card:hover::before{opacity:1}
+.why-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(0,198,212,0.15),rgba(0,198,212,0.05));border:1px solid rgba(0,198,212,0.25);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.why-icon svg{width:24px;height:24px;fill:var(--aqua)}
+.why-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;margin-bottom:.6rem;color:var(--white)}
+.why-card p{font-size:.875rem;color:var(--muted);line-height:1.7}
+
+/* ── CONTACT ── */
+#contact{background:var(--navy);position:relative;overflow:hidden}
+#contact::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--aqua),transparent)}
+.contact-inner{max-width:1100px;margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-info p{color:var(--muted);line-height:1.8;margin-bottom:2rem;font-size:.95rem}
+.call-cards{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
+.call-card{display:flex;align-items:center;gap:1rem;background:rgba(0,198,212,0.07);border:1px solid var(--border);border-radius:12px;padding:1rem 1.4rem;text-decoration:none;color:var(--white);transition:all .3s}
+.call-card:hover{background:rgba(0,198,212,0.14);border-color:var(--aqua);transform:translateX(6px)}
+.call-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--aqua),var(--aqua2));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.call-icon svg{width:20px;height:20px;fill:var(--navy)}
+.call-info .lbl{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.call-info .num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--white);line-height:1.2}
+.contact-details{display:flex;flex-direction:column;gap:1.2rem}
+.detail-item{display:flex;gap:14px;align-items:flex-start}
+.detail-icon{width:38px;height:38px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.detail-icon svg{width:18px;height:18px;fill:var(--gold)}
+.detail-item .lbl{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:3px}
+.detail-item p{font-size:.9rem;color:var(--white);line-height:1.6}
+.order-note{background:linear-gradient(135deg,rgba(200,169,110,0.1),rgba(200,169,110,0.04));border:1px solid rgba(200,169,110,0.25);border-radius:14px;padding:1.5rem;margin-top:2rem}
+.order-note p{color:var(--gold2);font-size:.9rem;line-height:1.7}
+.order-note strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-bottom:.5rem;color:var(--gold)}
+.map-embed{width:100%;height:380px;border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.map-embed iframe{width:100%;height:100%;border:none;display:block;filter:saturate(0.6) brightness(0.8)}
+
+/* ── FOOTER ── */
+footer{background:var(--navy2);border-top:1px solid var(--border);padding:60px 5vw 30px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:3rem}
+.footer-brand p{color:var(--muted);font-size:.875rem;line-height:1.8;margin-top:1rem;max-width:300px}
+.footer-col h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;margin-bottom:1.2rem;color:var(--white)}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.footer-col ul li a{color:var(--muted);text-decoration:none;font-size:.875rem;transition:color .3s;display:flex;align-items:center;gap:6px}
+.footer-col ul li a::before{content:'›';color:var(--aqua);font-size:1rem}
+.footer-col ul li a:hover{color:var(--aqua)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:.8rem}
+.footer-bottom .made{color:var(--muted);font-size:.78rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--white)}
+.footer-logo em{color:var(--aqua);font-style:normal}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal.revealed{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-50px);transition:opacity .8s ease,transform .8s ease}
+.reveal-left.revealed{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(50px);transition:opacity .8s ease,transform .8s ease}
+.reveal-right.revealed{opacity:1;transform:translateX(0)}
+.stagger-1{transition-delay:.1s}
+.stagger-2{transition-delay:.2s}
+.stagger-3{transition-delay:.3s}
+.stagger-4{transition-delay:.4s}
+.stagger-5{transition-delay:.5s}
+.stagger-6{transition-delay:.6s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .about-badge-float{left:0;bottom:-20px}
+  nav .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  section{padding:70px 5vw}
+  .footer-top{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:center}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <svg class="fish-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+      <path d="M55 20 C45 8, 25 5, 5 20 C25 35, 45 32, 55 20Z" opacity=".9"/>
+      <path d="M5 20 L0 12 L0 28 Z" opacity=".7"/>
+      <circle cx="47" cy="17" r="2.5" fill="white"/>
+    </svg>
+    <span><em>Eshwar</em> Sea Foods</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:9908206601" class="nav-cta">📞 Call Now</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#products" onclick="toggleMenu()">Products</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="tel:9908206601" style="color:var(--aqua);font-weight:600">📞 Call: 9908206601</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm.75 11.25h-1.5v-4.5h1.5v4.5zm0-6h-1.5v-1.5h1.5v1.5z"/></svg>
+      Trusted Since 2012 · Hyderabad
+    </div>
+    <h1 class="hero-title">
+      <span>Eshwar</span>
+      <span class="accent">Sea Foods</span>
+      <span class="foods" style="font-size:clamp(1.2rem,3vw,2rem);font-style:italic;font-weight:400;letter-spacing:2px">Hyderabad</span>
+    </h1>
+    <p class="hero-tagline">Your Trusted Dealer and Supplier of Quality Seafood Since 2012 — serving homes, restaurants, hotels &amp; catering businesses across Hyderabad.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        View Products
+      </a>
+      <a href="tel:9908206601" class="btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call Now
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+
+  <div class="hero-ocean">
+    <svg viewBox="0 0 1440 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 L1440,180 L0,180 Z" fill="rgba(4,13,26,0.9)"/>
+    </svg>
+    <svg viewBox="0 0 1440 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,100 C360,40 720,160 1080,80 C1260,40 1380,100 1440,120 L1440,180 L0,180 Z" fill="rgba(4,13,26,0.5)"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-image-wrap reveal-left">
+      <div class="about-img-placeholder">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&auto=format&fit=crop&q=80" alt="Fresh Seafood Display"/>
+      </div>
+      <div class="about-badge-float">
+        <span class="num">12+</span>
+        <span class="lbl">Years of Trust</span>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <span class="section-label">Our Story</span>
+      <h2 class="section-title">A Legacy of <span class="gold">Fresh &amp; Finest</span> Seafood</h2>
+      <div class="divider"></div>
+      <p class="section-desc" style="margin-bottom:1.2rem">
+        Established in 2012, <strong style="color:var(--white)">Eshwar Sea Foods</strong> has grown to become one of Hyderabad's most trusted seafood dealers and suppliers. We take immense pride in sourcing the freshest catches directly from coastal fishermen and reputed importers, delivering premium quality to your table.
+      </p>
+      <p class="section-desc" style="margin-bottom:1.2rem">
+        From households seeking fresh fish for daily meals to five-star hotels and large catering operations requiring bulk supply, we cater to every need with the same commitment — <em style="color:var(--aqua)">uncompromising freshness, hygiene, and quality.</em>
+      </p>
+      <p class="section-desc">
+        Our product range spans everything from premium Grade-1 prawns in multiple sizes to exotic imported fish, local favourites, lobsters, crab, and crab meat — all handled under strict cold-chain and hygiene protocols.
+      </p>
+      <div class="about-stats">
+        <div class="stat-card reveal stagger-1"><div class="snum">12+</div><div class="slbl">Years in Business</div></div>
+        <div class="stat-card reveal stagger-2"><div class="snum">500+</div><div class="slbl">Happy Customers</div></div>
+        <div class="stat-card reveal stagger-3"><div class="snum">40+</div><div class="slbl">Product Varieties</div></div>
+        <div class="stat-card reveal stagger-4"><div class="snum">100%</div><div class="slbl">Grade 1 Quality</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRODUCTS ═══════════ -->
+<section id="products">
+  <div class="products-header reveal">
+    <span class="section-label">Our Range</span>
+    <h2 class="section-title">Fresh <span class="gold">Products</span></h2>
+    <div class="divider"></div>
+    <p class="section-desc" style="margin:0 auto">Sourced fresh, handled with care — from Grade-1 prawns to premium fish and exotic shellfish, we have it all.</p>
+  </div>
+
+  <div class="cat-tabs reveal">
+    <button class="cat-tab active" onclick="filterCat('all',this)">All Products</button>
+    <button class="cat-tab" onclick="filterCat('prawn',this)">🦐 Prawns</button>
+    <button class="cat-tab" onclick="filterCat('fish',this)">🐟 Fish</button>
+    <button class="cat-tab" onclick="filterCat('other',this)">🦞 Others</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+
+    <!-- PRAWNS -->
+    <div class="prod-card" data-cat="prawn">
+      <div class="prod-img-placeholder">
+        <img src="8-12.png" alt="Prawns PD 8/12"/>
+        <span class="prod-tag">Premium</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Prawns</div>
+        <div class="prod-name">PD 8/12</div>
+        <div class="prod-note">Jumbo-sized, perfect for grills &amp; BBQ. Plump &amp; meaty texture. Available Tail-On / Tail-Off.</div>
+        <div class="grade-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Grade 1 Quality</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="prawn">
+      <div class="prod-img-placeholder">
+        <img src="16-20.png" alt="Prawns PD 16/20"/>
+        <span class="prod-tag">Popular</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Prawns</div>
+        <div class="prod-name">PD 16/20</div>
+        <div class="prod-note">Large prawns ideal for curries, stir-fry &amp; restaurant dishes. Tail-On / Tail-Off available.</div>
+        <div class="grade-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Grade 1 Quality</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="prawn">
+      <div class="prod-img-placeholder">
+        <img src="21-25.png" alt="Prawns PD 21/25"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Prawns</div>
+        <div class="prod-name">PD 21/25</div>
+        <div class="prod-note">Medium-large prawns. Great versatility for biryani, fry, and gravies. Tail-On / Tail-Off.</div>
+        <div class="grade-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Grade 1 Quality</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="prawn">
+      <div class="prod-img-placeholder">
+        <img src="26-30.png" alt="Prawns PD 26/30"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Prawns</div>
+        <div class="prod-name">PD 26/30</div>
+        <div class="prod-note">Preferred for daily home cooking &amp; catering. Consistent size, tender &amp; fresh.</div>
+        <div class="grade-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Grade 1 Quality</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="prawn">
+      <div class="prod-img-placeholder">
+        <img src="31-40.png" alt="Prawns PD 31/40"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Prawns</div>
+        <div class="prod-name">PD 31/40</div>
+        <div class="prod-note">Medium prawns perfect for pakodas, appetizers &amp; starters. Bulk orders welcome.</div>
+        <div class="grade-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Grade 1 Quality</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="prawn">
+      <div class="prod-img-placeholder">
+        <img src="51-60.png" alt="Prawns PD 51/60"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Prawns</div>
+        <div class="prod-name">PD 51/60</div>
+        <div class="prod-note">Small prawns ideal for high-volume cooking, fried rice &amp; noodles.</div>
+        <div class="grade-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Grade 1 Quality</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="prawn">
+      <div class="prod-img-placeholder">
+        <img src="71-80.png" alt="Prawns PD 71/80"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Prawns</div>
+        <div class="prod-name">PD 71/80</div>
+        <div class="prod-note">Fine-sized prawns for prawn masala, stuffings &amp; mixed seafood dishes.</div>
+        <div class="grade-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Grade 1 Quality</div>
+      </div>
+    </div>
+
+    <!-- FISH -->
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="indian_basa.png" alt="Indian Basa"/>
+        <span class="prod-tag">Boneless</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Indian Basa</div>
+        <div class="prod-note">100% boneless fillets. Mild flavour, great for fry, curry &amp; grills. Fresh &amp; frozen available.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="imported_basa.png" alt="Imported Basa"/>
+        <span class="prod-tag">Imported</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Imported Basa</div>
+        <div class="prod-note">Premium imported boneless basa fillets. Firm, white flesh loved by restaurants &amp; hotels.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="korameenu_boneless.png" alt="Korameenu Boneless"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Korameenu (Boneless)</div>
+        <div class="prod-note">Telugu classic — boneless cuts of the beloved Murrel fish. Rich taste, low fat.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="korameenu_curry_cut.png" alt="Korameenu Curry Cut"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Korameenu Curry Cut</div>
+        <div class="prod-note">Ready-to-cook curry-cut Korameenu pieces. Perfect size for rich gravies &amp; masalas.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="rohu.png" alt="Rohu Curry Cut"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Rohu Curry Cut</div>
+        <div class="prod-note">A household staple across Hyderabad. Freshwater Rohu curry-cut — ideal for deep fry &amp; curry.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="bocha.png" alt="Bocha Curry Cut"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Bocha Curry Cut</div>
+        <div class="prod-note">Popular local freshwater fish, curry-cut and cleaned. Loved for its delicate flavour.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="vanjaram.png" alt="Vanjaram"/>
+        <span class="prod-tag">Premium</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Vanjaram (King Fish)</div>
+        <div class="prod-note">The king of Indian seafood. Thick steaks, robust flavour. Top choice for weddings &amp; feasts.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="atlantic_salmon.png" alt="Atlantic Salmon"/>
+        <span class="prod-tag">Imported</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Atlantic Salmon</div>
+        <div class="prod-note">Premium imported Atlantic salmon. Rich in Omega-3. Preferred by top restaurants &amp; health-conscious buyers.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="salmon.png" alt="Indian Salmon"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Indian Salmon (Rawas)</div>
+        <div class="prod-note">Locally sourced Indian Salmon — versatile, flavourful. Great for fry, grill &amp; curry preparations.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="white_pomfret.png" alt="White Pomfret"/>
+        <span class="prod-tag">Delicacy</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">White Pomfret</div>
+        <div class="prod-note">Highly prized delicacy fish. Buttery, boneless flesh. A premium choice for special occasions.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="black_pomfret.png" alt="Black Pomfret"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Black Pomfret</div>
+        <div class="prod-note">Flavourful &amp; affordable alternative to White Pomfret. Excellent for shallow-fry &amp; gravy.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="tilapia.png" alt="Tilapia"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Tilapia Boneless</div>
+        <div class="prod-note">Clean, mild-tasting freshwater fish. Low in calories, high in protein. Versatile for all recipes.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="fish">
+      <div class="prod-img-placeholder">
+        <img src="tuna.png" alt="Tuna"/>
+        <span class="prod-tag">Export Grade</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Fish</div>
+        <div class="prod-name">Tuna</div>
+        <div class="prod-note">Premium-grade Tuna — perfect for sashimi, steaks, grills &amp; high-end restaurant preparations.</div>
+      </div>
+    </div>
+
+    <!-- OTHERS -->
+    <div class="prod-card" data-cat="other">
+      <div class="prod-img-placeholder">
+        <img src="lobster.png" alt="Lobsters"/>
+        <span class="prod-tag">Exotic</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Others</div>
+        <div class="prod-name">Lobsters</div>
+        <div class="prod-note">Live &amp; fresh lobsters. The crown jewel of seafood — served in top restaurants &amp; star hotels. Bulk supply available.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="other">
+      <div class="prod-img-placeholder">
+        <img src="crab.png" alt="Crab"/>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Others</div>
+        <div class="prod-name">Crab (Whole)</div>
+        <div class="prod-note">Fresh whole crabs — a Hyderabadi festive favourite. Ideal for pepper crab, butter garlic &amp; curries.</div>
+      </div>
+    </div>
+
+    <div class="prod-card" data-cat="other">
+      <div class="prod-img-placeholder">
+        <img src="crab_meat.png" alt="Crab Meat"/>
+        <span class="prod-tag">Ready-to-Cook</span>
+      </div>
+      <div class="prod-body">
+        <div class="prod-cat-label">Others</div>
+        <div class="prod-name">Crab Meat</div>
+        <div class="prod-note">Pure crab meat — no shell, no bone, no waste. 100% clean meat ready for cooking. Perfect for restaurants, cakes &amp; salads.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ WHY CHOOSE US ═══════════ -->
+<section id="why">
+  <div class="why-inner">
+    <div class="why-header reveal">
+      <span class="section-label">Why Us</span>
+      <h2 class="section-title">Why Choose <span class="gold">Eshwar Sea Foods</span></h2>
+      <div class="divider" style="margin:1.5rem auto"></div>
+      <p class="section-desc" style="margin:0 auto;text-align:center;max-width:540px">A decade of trust built one fresh delivery at a time. Here's what sets us apart.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal stagger-1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3>Fresh Quality Seafood</h3>
+        <p>We source directly from trusted fishermen and certified suppliers, ensuring every product reaches you at peak freshness with no compromise on quality.</p>
+      </div>
+
+      <div class="why-card reveal stagger-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        </div>
+        <h3>Trusted Since 2012</h3>
+        <p>Over 12 years of serving Hyderabad with integrity and consistency. Our long-standing relationships with customers speak louder than any advertisement.</p>
+      </div>
+
+      <div class="why-card reveal stagger-3">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.87.18-1.33C18 2.53 15.47 0 12.33 0c-1.7 0-3.23.88-4.16 2.19L7 3.5l-1.17-1.31C4.9.88 3.37 0 1.67 0H1.5C1.22 0 1 .22 1 .5v1C1 1.78 1.22 2 1.5 2h.17c1.12 0 2.17.62 2.83 1.5L6 5H4c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
+        </div>
+        <h3>Bulk Orders Accepted</h3>
+        <p>Whether you need 5 kg or 500 kg, we handle bulk orders with ease. Competitive pricing for large quantities with assured availability.</p>
+      </div>
+
+      <div class="why-card reveal stagger-4">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>
+        </div>
+        <h3>Restaurant Supply Available</h3>
+        <p>Regular supply partnerships with restaurants, hotels, and cloud kitchens. Scheduled deliveries with consistent quality and quantity — every single time.</p>
+      </div>
+
+      <div class="why-card reveal stagger-5">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Hygienic Packaging</h3>
+        <p>All products are packed under strict hygiene protocols with food-safe materials. Cold-chain maintained throughout handling and delivery.</p>
+      </div>
+
+      <div class="why-card reveal stagger-6">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5V2.05z"/></svg>
+        </div>
+        <h3>Fast Service</h3>
+        <p>We understand that freshness is time-sensitive. Our streamlined process ensures quick turnaround and prompt delivery within Hyderabad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <div style="text-align:center;margin-bottom:4rem" class="reveal">
+      <span class="section-label" style="justify-content:center">
+        <span>Get In Touch</span>
+      </span>
+      <h2 class="section-title">Place Your <span class="gold">Order Today</span></h2>
+      <div class="divider" style="margin:1.5rem auto"></div>
+      <p class="section-desc" style="margin:0 auto;text-align:center">For fresh seafood, bulk supply, or any queries — our team is ready to help. Call us directly!</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;margin-bottom:1rem;color:var(--white)">Call Us Directly</h3>
+        <p style="color:var(--muted);margin-bottom:1.5rem;font-size:.9rem;line-height:1.7">We don't have online ordering — for the best prices, availability, and personalised service, just give us a call. We're always happy to help!</p>
+
+        <div class="call-cards">
+          <a href="tel:9908206601" class="call-card">
+            <div class="call-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div class="call-info">
+              <div class="lbl">Primary Contact</div>
+              <div class="num">9908206601</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--aqua)" style="margin-left:auto"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </a>
+
+          <a href="tel:8919511028" class="call-card">
+            <div class="call-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div class="call-info">
+              <div class="lbl">Secondary Contact</div>
+              <div class="num">8919511028</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--aqua)" style="margin-left:auto"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </a>
+
+          <a href="tel:7702533022" class="call-card">
+            <div class="call-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div class="call-info">
+              <div class="lbl">Alternate Contact</div>
+              <div class="num">7702533022</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--aqua)" style="margin-left:auto"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </a>
+        </div>
+
+        <div class="contact-details">
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div class="lbl">Location</div>
+              <p>Eshwar Sea Foods, Hyderabad, Telangana, India</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <div>
+              <div class="lbl">Working Hours</div>
+              <p>Monday – Sunday: 6:00 AM – 10:00 PM<br/><span style="color:var(--aqua);font-size:.82rem">Open all days including holidays</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-note">
+          <strong>📞 How to Order</strong>
+          <p>For orders, pricing details, bulk enquiries, and availability — please call us directly on any of the numbers above. We'll be happy to assist you!</p>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=Eshwar+Sea+Foods,+Hyderabad,+Telangana,+India&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Eshwar Sea Foods Location">
+          </iframe>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem">
+          <a href="tel:9908206601" class="btn-primary" style="justify-content:center;font-size:.85rem">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call Now
+          </a>
+          <a href="https://wa.me/919908206601" target="_blank" class="btn-outline" style="justify-content:center;font-size:.85rem;border-color:rgba(37,211,102,0.5);color:#25d366">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><em>Eshwar</em> Sea Foods</div>
+        <p>Your Trusted Dealer and Supplier of Quality Seafood Since 2012. Serving homes, restaurants, hotels, and catering businesses across Hyderabad with fresh, frozen, and premium seafood products.</p>
+        <div style="display:flex;gap:.75rem;margin-top:1.5rem;flex-wrap:wrap">
+          <a href="tel:9908206601" class="btn-primary" style="font-size:.8rem;padding:10px 22px">📞 9908206601</a>
+          <a href="tel:8919511028" class="btn-outline" style="font-size:.8rem;padding:9px 20px">📞 8919511028</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Our Products</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products">Prawns (PD Range)</a></li>
+          <li><a href="#products">Indian &amp; Imported Basa</a></li>
+          <li><a href="#products">Vanjaram (King Fish)</a></li>
+          <li><a href="#products">Atlantic Salmon</a></li>
+          <li><a href="#products">Lobsters &amp; Crab</a></li>
+          <li><a href="#products">Crab Meat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Eshwar Sea Foods | www.eshwarseafoods.in. All rights reserved.</p>
+      <p class="made">Hyderabad, Telangana, India 🇮🇳</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu toggle
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Product filter
+function filterCat(cat, btn) {
+  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.prod-card').forEach(card => {
+    const show = cat === 'all' || card.dataset.cat === cat;
+    card.classList.toggle('visible', show);
+  });
+}
+// Show all on load
+document.querySelectorAll('.prod-card').forEach(c => c.classList.add('visible'));
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('revealed');
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
